@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTU Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.webp" type="image/webp">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+    </label>
+    <br>
+    <header>
+        <h1>VTU Wallet</h1>
+        <p>Deposit, Withdraw, Buy Data, and More</p>
+    </header>
+
+    <main>
+        <section class="balance" id="act">
+            <h2>Wallet Balance</h2>
+            <p class="amount">₦<span id="cash"></span></p>
+        </section>
+
+        <section class="actions">
+            <div class="action">
+                <h3>Deposit</h3>
+                <button id="deposit">Deposit Funds</button>
+            </div>
+            <div class="action">
+                <h3>Withdraw</h3>
+                <button id="withdraw">Withdraw Funds</button>
+            </div>
+            <div class="action">
+                <h3>Buy Data</h3>
+                <button>Buy Data</button>
+            </div>
+            <div class="action">
+                <h3>Other VTU Services</h3>
+                <button>View Services</button>
+                
+            </div>
+        </section>
+        <div id="hidden_deposit" style="display: none;">
+            <form>
+                <p>Deposit to the bank below and your wallet will be funded immediatly.</p>
+                <section id="bank_section">
+                    <p>Bank: Sterling Bank</p>
+                    <p>Account Number: 1234567890</p>
+                    <p>Account Name: InstantVTU NG</p>
+                </section>
+                <section id="bank_section">
+                    <p>Bank: Wema Bank</p>
+                    <p>Account Number: 1234567890</p>
+                    <p>Account Name: InstantVTU NG</p>
+                </section>
+                <br>
+                <p>Amount to be Deposited: <input required type="number" id="amount_tobe"></p>
+                <br>
+                <button id="confirm_deposit" type="submit">Confirm</button>
+            </form>
+        </div>
+        <div id="hidden_withdraw" style="display: none;">
+            <form>
+                <p>Deposit to the bank below and your wallet will be funded immediatly.</p>
+                <section id="bank_section">
+                    <p>Bank Name: <input type="number" id="text"></p>
+                </section>
+                <section id="bank_section">
+                    <p>Account Name: <input type="number" id="text"></p>
+                </section>
+                <section id="bank_section">
+                    <p>Account Number: <input type="number" id="acc_no"></p>
+                </section>
+                <br>
+                <p>Amount to be Withdrawed: <input type="number" id="amount_towit"></p>
+                <br>
+                <button id="confirm_withdraw">Withdraw</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 VTU Wallet. All rights reserved.</p>
+    </footer>
+</body>
+</html>
